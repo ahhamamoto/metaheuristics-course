@@ -5,6 +5,7 @@ utility/weight ratio of the available elements.
 
 import numpy as np
 
+
 def knapsack(weights, utilities, knapsack_weight):
     """
     Uses a greedy algorithm to solve the binary knapsack problem:
@@ -20,8 +21,8 @@ def knapsack(weights, utilities, knapsack_weight):
 
     solution = np.zeros(number_of_items)
 
-    ## puts the item in the bag and if it excedes the weight, remove it from
-    ## bag and goes to the next iteration
+    # puts the item in the bag and if it excedes the weight, remove it from
+    # bag and goes to the next iteration
     for i in ordered_indexes:
         solution[i] = 1
         if (solution * weights).sum() > knapsack_weight:
